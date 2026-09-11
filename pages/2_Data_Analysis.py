@@ -5,10 +5,12 @@ import pandas as pd
 # 1. Load Dataset
 # -----------------------------------------
 
-df = pd.read_csv(
-    r"C:\tools\IPL_Matches_Data_2008_2026.csv"
-)
+from pathlib import Path
+import pandas as pd
 
+file_path = Path(__file__).parent.parent / "IPL_Matches_Data_2008_2026.csv"
+
+df = pd.read_csv(file_path)
 # -----------------------------------------
 # 2. Title
 # -----------------------------------------
